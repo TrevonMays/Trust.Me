@@ -1,4 +1,16 @@
-.record { padding: 0.5rem 0 }
-.record header h2 { margin: 0 }
-.record dl { display: grid; gap: 1rem }
-.record footer { margin-top: 1rem }
+.record {
+    padding: 0.5rem 0
+}
+
+.record header h2 {
+    margin: 0
+}
+
+.record dl {
+    display: grid;
+    gap: 1rem
+}
+
+.record footer {
+    margin-top: 1rem
+}

@@ -1,3 +1,15 @@
-.medications h2 { margin-top: 0 }
-.meds-table { width: 100%; border-collapse: collapse }
-.meds-table th, .meds-table td { padding: 0.5rem; border-bottom: 1px solid #eee; text-align: left }
+.medications h2 {
+    margin-top: 0
+}
+
+.meds-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.meds-table th,
+.meds-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    text-align: left
+}

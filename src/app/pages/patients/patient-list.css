@@ -1,3 +1,12 @@
-.patient-list h2 { margin-top: 0 }
-.patient-list a { color: #0366d6; text-decoration: none }
-.patient-list a:hover { text-decoration: underline }
+.patient-list h2 {
+    margin-top: 0
+}
+
+.patient-list a {
+    color: #0366d6;
+    text-decoration: none
+}
+
+.patient-list a:hover {
+    text-decoration: underline
+}

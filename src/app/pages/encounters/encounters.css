@@ -1,3 +1,13 @@
-.encounters h2 { margin-top: 0 }
-.encounters article { border: 1px solid #eee; padding: 0.5rem; margin-bottom: 0.5rem }
-.encounters h3 { margin: 0 0 0.25rem }
+.encounters h2 {
+    margin-top: 0
+}
+
+.encounters article {
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem
+}
+
+.encounters h3 {
+    margin: 0 0 0.25rem
+}
