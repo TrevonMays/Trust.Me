@@ -1,0 +1,8 @@
+<section aria-labelledby="patients-heading" class="patient-list">
+  <h2 id="patients-heading">Patients</h2>
+  <ul>
+    <li *ngFor="let p of patients">
+      <a [routerLink]="['/patient', p.id]">{{ p.name }} <span class="muted">(DOB: {{ p.dob }})</span></a>
+    </li>
+  </ul>
+</section>

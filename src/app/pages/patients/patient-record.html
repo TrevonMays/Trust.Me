@@ -1,0 +1,30 @@
+<article class="record" aria-labelledby="patient-name">
+  <header>
+    <h2 id="patient-name">{{ patient.name }}</h2>
+    <p class="muted">ID: {{ id }} — DOB: {{ patient.dob }} — {{ patient.gender }}</p>
+  </header>
+
+  <section aria-labelledby="vitals-heading">
+    <h3 id="vitals-heading">Vitals</h3>
+    <dl>
+      <dt>Blood pressure</dt>
+      <dd>-- / -- mmHg</dd>
+      <dt>Heart rate</dt>
+      <dd>-- bpm</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="meds-heading">
+    <h3 id="meds-heading">Medications</h3>
+    <p>No active medications recorded.</p>
+  </section>
+
+  <section aria-labelledby="notes-heading">
+    <h3 id="notes-heading">Notes</h3>
+    <p><em>No notes yet.</em></p>
+  </section>
+
+  <footer>
+    <a routerLink="/patients">Back to list</a>
+  </footer>
+</article>

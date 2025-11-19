@@ -1,0 +1,23 @@
+<section class="appointments" aria-labelledby="appointments-heading">
+  <h2 id="appointments-heading">Appointments & Scheduling</h2>
+
+  <table class="appointments-table" role="table">
+    <caption class="visually-hidden">Upcoming appointments</caption>
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Patient</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appt of appointments">
+        <td>{{ appt.time }}</td>
+        <td><a [routerLink]="['/patient', appt.id]">{{ appt.patient }}</a></td>
+        <td>{{ appt.status }}</td>
+        <td><a class="muted" [routerLink]="['/patient', appt.id]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

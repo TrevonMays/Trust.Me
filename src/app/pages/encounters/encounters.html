@@ -1,0 +1,13 @@
+<section class="encounters" aria-labelledby="encounters-heading">
+    <h2 id="encounters-heading">Encounters & Notes</h2>
+
+    <ul>
+        <li *ngFor="let e of encounters">
+            <article [attr.aria-labelledby]="'enc-' + e.id">
+                <h3 [id]="'enc-' + e.id">{{ e.patient }} — <small class="muted">{{ e.date }}</small></h3>
+                <p>{{ e.summary }}</p>
+                <p><a [routerLink]="['/patient', e.id]">Open patient</a></p>
+            </article>
+        </li>
+    </ul>
+</section>

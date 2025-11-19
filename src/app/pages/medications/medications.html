@@ -1,0 +1,23 @@
+<section class="medications" aria-labelledby="meds-heading">
+  <h2 id="meds-heading">Medications</h2>
+
+  <table class="meds-table">
+    <caption class="visually-hidden">Active medications</caption>
+    <thead>
+      <tr>
+        <th scope="col">Medication</th>
+        <th scope="col">Dose</th>
+        <th scope="col">Patient</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of medications">
+        <td>{{ m.name }}</td>
+        <td>{{ m.dose }}</td>
+        <td><a [routerLink]="['/patient', m.id]">{{ m.patient }}</a></td>
+        <td><a class="muted" [routerLink]="['/patient', m.id]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,12 @@
+.file-uploader { margin: 1rem 0 }
+.dropzone { display: block; border: 2px dashed #ccc; padding: 1rem; text-align: center; cursor: pointer; position: relative }
+.dropzone input[type="file"] { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer }
+.drop-instructions { pointer-events: none }
+.link-like { background: none; border: none; color: #0366d6; text-decoration: underline; cursor: pointer; padding: 0; font: inherit }
+.previews { list-style: none; padding: 0; margin: 1rem 0; display: grid; grid-template-columns: repeat(auto-fill, 140px); gap: 0.75rem }
+.preview { border: 1px solid #eee; padding: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; align-items: center }
+.preview img { width: 120px; height: 80px; object-fit: cover; border-radius: 3px }
+.meta { text-align: center }
+.meta .name { font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px }
+.muted { color: #6b6b6b }
+.actions { margin-top: 0.5rem }
