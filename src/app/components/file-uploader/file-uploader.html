@@ -1,24 +1,25 @@
 <section class="file-uploader">
-  <label class="dropzone" (drop)="handleDrop($event)" (dragover)="handleDragOver($event)" tabindex="0">
-    <input type="file" multiple [accept]="accept" (change)="handleInput($event)" aria-label="Upload images" />
-    <div class="drop-instructions">
-      <strong>Drop images here</strong> or <button type="button" class="link-like" (click)="$event.preventDefault();">browse</button>
-      <div class="hint">(JPEG, PNG, GIF — up to {{ maxSize / 1024 / 1024 }} MB each)</div>
+    <label class="dropzone" (drop)="handleDrop($event)" (dragover)="handleDragOver($event)" tabindex="0">
+        <input type="file" multiple [accept]="accept" (change)="handleInput($event)" aria-label="Upload images" />
+        <div class="drop-instructions">
+            <strong>Drop images here</strong> or <button type="button" class="link-like"
+                (click)="$event.preventDefault();">browse</button>
+            <div class="hint">(JPEG, PNG, GIF — up to {{ maxSize / 1024 / 1024 }} MB each)</div>
+        </div>
+    </label>
+
+    <ul class="previews" *ngIf="files.length">
+        <li *ngFor="let f of files; let i = index" class="preview">
+            <img [src]="f.url" [alt]="f.file.name" />
+            <div class="meta">
+                <div class="name">{{ f.file.name }}</div>
+                <div class="size muted">{{ (f.file.size / 1024) | number:'1.0-0' }} KB</div>
+                <button type="button" (click)="removeFile(i)">Remove</button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="actions">
+        <button type="button" (click)="upload()" [disabled]="files.length === 0">Upload</button>
     </div>
-  </label>
-
-  <ul class="previews" *ngIf="files.length">
-    <li *ngFor="let f of files; let i = index" class="preview">
-      <img [src]="f.url" [alt]="f.file.name" />
-      <div class="meta">
-        <div class="name">{{ f.file.name }}</div>
-        <div class="size muted">{{ (f.file.size / 1024) | number:'1.0-0' }} KB</div>
-        <button type="button" (click)="removeFile(i)">Remove</button>
-      </div>
-    </li>
-  </ul>
-
-  <div class="actions">
-    <button type="button" (click)="upload()" [disabled]="files.length === 0">Upload</button>
-  </div>
 </section>
