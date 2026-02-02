@@ -1,37 +1,96 @@
-.dashboard h2 {
-    margin-top: 0
+.dashboard {
+    max-width: 1040px;
+    margin: 1.5rem auto 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+    border: 1px solid #d4dfef;
 }
 
+.dashboard>h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.4rem;
+    color: #1d4ed8;
+    /* clean blue heading */
+}
+
+/* Cards grid */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 1rem;
-    margin: 1rem 0
+    margin-bottom: 1.75rem;
 }
 
+/* Individual card links */
 .card {
     display: block;
-    padding: 1rem;
-    border: 1px solid #eee;
     text-decoration: none;
-    color: inherit;
-    border-radius: 6px
+    background: #f9fbff;
+    border-radius: 10px;
+    border: 1px solid #dbe4f3;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+    transition:
+        transform 140ms ease-out,
+        box-shadow 140ms ease-out,
+        border-color 140ms ease-out,
+        background-color 140ms ease-out;
 }
 
 .card h3 {
-    margin: 0 0 0.25rem
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: #1f2933;
 }
 
-.stat {
-    font-size: 1.5rem;
-    font-weight: 600
+.card .stat {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Card hover */
+.card:hover,
+.card:focus-visible {
+    outline: none;
+    transform: translateY(-2px);
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+}
+
+/* Quick actions section */
+.quick-actions {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2ebfa;
+}
+
+.quick-actions h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.05rem;
+    color: #1d4ed8;
 }
 
 .quick-actions ul {
     list-style: none;
-    padding: 0
+    padding: 0;
+    margin: 0;
 }
 
-.quick-actions li {
-    margin: 0.25rem 0
+.quick-actions li+li {
+    margin-top: 0.35rem;
+}
+
+.quick-actions a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.quick-actions a:hover {
+    text-decoration: underline;
 }

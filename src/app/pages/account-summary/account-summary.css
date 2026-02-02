@@ -1,0 +1,71 @@
+/* Add spacing from the top so the blue background shows */
+.account {
+  max-width: 1040px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 1.5rem 1.75rem 2rem;
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  border: 1px solid #d4dfef;
+}
+
+/* Header */
+.account > h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  color: #1d4ed8;
+}
+
+/* Intro paragraph */
+.account > p {
+  margin: 0 0 1.5rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* These inner sections match your card style */
+.recent-activities,
+.important-info {
+  background: #f9fbff; /* lightest blue tint inside card */
+  border-radius: 10px;
+  border: 1px solid #dbe4f3;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  margin-bottom: 1rem;
+}
+
+.recent-activities h3,
+.important-info h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  color: #1f2933;
+}
+
+/* List styling */
+.recent-activities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-activities li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #e7eeff;
+  font-size: 0.95rem;
+}
+
+.recent-activities li:last-child {
+  border-bottom: none;
+}
+
+.recent-activities strong {
+  color: #2563eb;
+}
+
+.important-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}

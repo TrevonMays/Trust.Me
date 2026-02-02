@@ -1,4 +1,80 @@
-.appointments h2 { margin-top: 0 }
-.appointments-table { width: 100%; border-collapse: collapse }
-.appointments-table th, .appointments-table td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #eee }
-.appointments-table tbody tr:hover { background: #fafafa }
+/* Main container card */
+.appointments {
+  max-width: 1040px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 1.5rem 1.75rem 2rem;
+
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d4dfef;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Page title */
+.appointments > h2 {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* Table wrapper */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9fbff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dbe4f3;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+/* Table header */
+.appointments-table thead {
+  background: #e5efff;
+}
+
+.appointments-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 1px solid #d6e2f5;
+}
+
+/* Table rows */
+.appointments-table td {
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  border-bottom: 1px solid #e7eefb;
+}
+
+/* Hover effect on rows */
+.appointments-table tbody tr:hover {
+  background: #eef5ff;
+  transition: background 0.15s ease-in-out;
+}
+
+/* Patient name links */
+.appointments-table td a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.appointments-table td a:hover {
+  text-decoration: underline;
+}
+
+/* Muted "View" link */
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.muted:hover {
+  color: #1f2937;
+}

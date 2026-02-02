@@ -1,15 +1,74 @@
-.medications h2 {
-    margin-top: 0
+.medications {
+    max-width: 1040px;
+    margin: 1.5rem auto 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+    border: 1px solid #d4dfef;
 }
 
+.medications>h2 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    color: #1d4ed8;
+}
+
+/* Table */
 .meds-table {
     width: 100%;
-    border-collapse: collapse
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dbe4f3;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.meds-table caption {
+    padding: 0.5rem;
+}
+
+/* Header row */
+.meds-table thead {
+    background: #e0ebff;
 }
 
 .meds-table th,
 .meds-table td {
-    padding: 0.5rem;
-    border-bottom: 1px solid #eee;
-    text-align: left
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    text-align: left;
+    border-bottom: 1px solid #edf2ff;
+}
+
+.meds-table th {
+    font-weight: 600;
+    color: #1f2933;
+}
+
+/* Zebra rows */
+.meds-table tbody tr:nth-child(even) td {
+    background: #f5f8ff;
+}
+
+/* Hover row */
+.meds-table tbody tr:hover td {
+    background: #e7f0ff;
+}
+
+/* Links */
+.meds-table a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.meds-table a.muted {
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.meds-table a:hover {
+    text-decoration: underline;
 }

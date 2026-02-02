@@ -1,80 +1,189 @@
 .file-uploader {
-    margin: 1rem 0
+    max-width: 640px;
+    margin: 1.5rem auto 2.5rem;
+    padding: 1.25rem 1.5rem 1.75rem;
+
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #d4dfef;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
 }
 
+/* Dropzone area */
 .dropzone {
-    display: block;
-    border: 2px dashed #ccc;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+
+    padding: 1.75rem 1.25rem;
+    border-radius: 10px;
+    border: 2px dashed #9cb7ef;
+    background: #f3f7ff;
+    color: #1f2937;
     cursor: pointer;
-    position: relative
+
+    transition:
+        border-color 0.15s ease-out,
+        background-color 0.15s ease-out,
+        box-shadow 0.15s ease-out,
+        transform 0.1s ease-out;
 }
 
+/* Hide the actual file input */
 .dropzone input[type="file"] {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer
+    display: none;
 }
 
-.drop-instructions {
-    pointer-events: none
+/* Hover / focus states */
+.dropzone:hover,
+.dropzone:focus-visible {
+    outline: none;
+    border-color: #2563eb;
+    background: #e7f0ff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+    transform: translateY(-1px);
 }
 
+/* Text inside dropzone */
+.drop-instructions strong {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.drop-instructions .hint {
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* "browse" link-like button */
 .link-like {
-    background: none;
     border: none;
-    color: #0366d6;
+    background: none;
+    padding: 0;
+    margin: 0 0.1rem;
+    color: #2563eb;
+    font: inherit;
     text-decoration: underline;
     cursor: pointer;
-    padding: 0;
-    font: inherit
 }
 
+.link-like:hover {
+    color: #1d4ed8;
+}
+
+/* Preview list */
 .previews {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 1.1rem 0 0.75rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 140px);
-    gap: 0.75rem
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.75rem;
 }
 
+/* Each preview card */
 .preview {
-    border: 1px solid #eee;
-    padding: 0.5rem;
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid #dbe4f3;
+    background: #f9fbff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+/* Thumbnail */
+.preview img {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #d4dfef;
+}
+
+/* File meta */
+.preview .meta {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: center
+    justify-content: center;
+    gap: 0.15rem;
+    min-width: 0;
 }
 
-.preview img {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 3px
+.preview .name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f2937;
+    word-break: break-all;
 }
 
-.meta {
-    text-align: center
-}
-
-.meta .name {
+.preview .size {
     font-size: 0.85rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 120px
 }
 
-.muted {
-    color: #6b6b6b
+/* Remove button inside preview */
+.preview button {
+    align-self: flex-start;
+    margin-top: 0.15rem;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #374151;
+    transition:
+        background-color 0.12s ease-out,
+        border-color 0.12s ease-out,
+        color 0.12s ease-out;
 }
 
+.preview button:hover {
+    background: #fee2e2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+/* Bottom actions */
 .actions {
-    margin-top: 0.5rem
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+}
+
+/* Main Upload button */
+.actions button {
+    border-radius: 999px;
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease-out,
+        border-color 0.15s ease-out,
+        box-shadow 0.15s ease-out,
+        transform 0.1s ease-out;
+}
+
+.actions button:hover:not(:disabled) {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Disabled state */
+.actions button:disabled {
+    background: #cbd5f5;
+    border-color: #cbd5f5;
+    cursor: not-allowed;
+    box-shadow: none;
 }

@@ -1,13 +1,71 @@
-.encounters h2 {
-    margin-top: 0
+.encounters {
+  max-width: 1040px;
+  margin: 1.5rem auto;
+  padding: 1.5rem 1.75rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  border: 1px solid #d4dfef;
 }
 
+.encounters > h2 {
+  margin: 0 0 1.1rem;
+  font-size: 1.4rem;
+  color: #1d4ed8;
+}
+
+.encounters ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.encounters li + li {
+  margin-top: 0.75rem;
+}
+
+/* Individual encounter card */
 .encounters article {
-    border: 1px solid #eee;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem
+  background: #f9fbff;
+  border-radius: 10px;
+  border: 1px solid #dbe4f3;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  transition:
+    background-color 140ms ease-out,
+    border-color 140ms ease-out,
+    box-shadow 140ms ease-out,
+    transform 140ms ease-out;
+}
+
+.encounters article:hover {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.16);
+  transform: translateY(-1px);
 }
 
 .encounters h3 {
-    margin: 0 0 0.25rem
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: #1f2933;
+}
+
+.encounters .muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.encounters p {
+  margin: 0.25rem 0;
+}
+
+.encounters a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.encounters a:hover {
+  text-decoration: underline;
 }
