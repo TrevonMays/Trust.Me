@@ -1,41 +1,63 @@
-Trust.Me is a healthcare-focused application concept designed to help critical medical information become quickly accessible in emergency situations.
+# Trust.Me
 
-## Overview
-This project was inspired by real conversations with doctors and nurses about how difficult it can be to access life-saving patient information when time is limited.
+Trust.Me is a healthcare web application focused on making critical patient information easier to access and organize.
 
-## Problem
-In emergency situations, patients may be unconscious or unable to communicate important medical details such as allergies, medications, or pre-existing conditions.
+Built with Angular, the app is structured around a medical-record workflow that includes patient records, medications, appointments, encounters, account summaries, and supporting document uploads.
 
-## Solution
-Trust.Me is designed to provide fast access to essential medical records and emergency health information when it matters most.
+## Live Focus
 
-## Target Users
-- Patients with important medical histories
-- Emergency responders
-- Hospitals and care teams
-- Families supporting loved ones with medical conditions
+This project is being developed as an emergency-medical-information product concept: a system designed to help organize and surface essential patient data when speed and clarity matter most.
+
+## Current Features
+
+- Dashboard view
+- Patient list and patient record pages
+- Appointments page
+- Encounters page
+- Medications page
+- Account summary page
+- File uploader for supporting records
 
 ## Tech Stack
-- Add your exact stack here
 
-## Features
-- Emergency medical profile concept
-- Fast-access health information workflow
-- Patient-centered problem solving
-- Real-world healthcare use case
+- Angular 20
+- TypeScript
+- Angular Router
+- Angular Forms
+- RxJS
+- HTML
+- CSS / SCSS
 
 ## Why I Built This
-I wanted to build something that solves a real problem with practical impact. This project reflects my interest in creating software that is both useful and meaningful.
 
-## Future Improvements
-- Secure authentication
-- Role-based access
-- HIPAA-conscious architecture planning
-- Mobile-first emergency access flow
-- Integration with healthcare record systems
+I started Trust.Me hands-on because I wanted to build a healthcare-focused product around a real problem: patients and care teams often need critical information quickly, but that information is not always organized in a simple, accessible way.
 
-## Repository Status
-This project is actively being refined as a concept and product direction.
+This project lets me apply frontend engineering skills to a practical use case with real-world value.
+
+## What This Project Demonstrates
+
+- Building a structured Angular application
+- Route-based page architecture
+- Organizing healthcare-related data into usable workflows
+- Creating product-focused UI around a real-world problem
+- Owning development decisions from concept to implementation
+
+## Next Development Goals
+
+- Refine dashboard UX
+- Improve patient record details and layout
+- Add stronger emergency-information visibility
+- Improve data flow between pages
+- Add better validation and persistence
+- Polish responsive design for mobile use
 
 ## Getting Started
-Add setup instructions here once the implementation is finalized.
+
+```bash
+npm install
+npm start
+```
+
+## Repository Status
+
+Active project under hands-on development and refinement.
