@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow border-0">
+
+    <div class="card-body p-5">
+
+        <h2 class="fw-bold mb-4">
+            Add Patient
+        </h2>
+
+        <form method="POST">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        name="first_name"
+                        class="form-control"
+                        required
+                    >
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        name="last_name"
+                        class="form-control"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        name="date_of_birth"
+                        class="form-control"
+                    >
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Gender
+                    </label>
+
+                    <select
+                        name="gender"
+                        class="form-select"
+                    >
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Phone
+                </label>
+
+                <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                >
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    name="email_address"
+                    class="form-control"
+                >
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Allergies
+                </label>
+
+                <textarea
+                    name="allergies"
+                    class="form-control"
+                    rows="3"
+                ></textarea>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Medications
+                </label>
+
+                <textarea
+                    name="medications"
+                    class="form-control"
+                    rows="3"
+                ></textarea>
+
+            </div>
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Medical History
+                </label>
+
+                <textarea
+                    name="medical_history"
+                    class="form-control"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+            <button class="btn btn-primary px-4">
+                Save Patient
+            </button>
+
+            <a href="/" class="btn btn-secondary px-4">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

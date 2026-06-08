@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow border-0">
+
+    <div class="card-body p-5">
+
+        <h2 class="fw-bold">
+            {{ patient.first_name }}
+            {{ patient.last_name }}
+        </h2>
+
+        <hr>
+
+        <p>
+            <strong>DOB:</strong>
+            {{ patient.date_of_birth }}
+        </p>
+
+        <p>
+            <strong>Gender:</strong>
+            {{ patient.gender }}
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            {{ patient.phone }}
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            {{ patient.email_address }}
+        </p>
+
+        <hr>
+
+        <h4>Medical Information</h4>
+
+        <p>
+            <strong>Allergies:</strong>
+            {{ patient.allergies }}
+        </p>
+
+        <p>
+            <strong>Medications:</strong>
+            {{ patient.medications }}
+        </p>
+
+        <p>
+            <strong>Medical History:</strong>
+            {{ patient.medical_history }}
+        </p>
+
+        <a
+            href="/patients/{{ patient.id }}/edit"
+            class="btn btn-warning"
+        >
+            Edit Patient
+        </a>
+
+        <a href="/" class="btn btn-secondary">
+            Back
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow border-0">
+
+    <div class="card-body p-5">
+
+        <h2 class="fw-bold mb-4">
+            Edit Patient
+        </h2>
+
+        <form method="POST">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">First Name</label>
+                    <input
+                        type="text"
+                        name="first_name"
+                        class="form-control"
+                        value="{{ patient.first_name }}"
+                    >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input
+                        type="text"
+                        name="last_name"
+                        class="form-control"
+                        value="{{ patient.last_name }}"
+                    >
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    <input
+                        type="text"
+                        name="date_of_birth"
+                        class="form-control"
+                        value="{{ patient.date_of_birth }}"
+                    >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <select
+    name="gender"
+    class="form-select"
+>
+
+    <option value="">
+        Select Gender
+    </option>
+
+    <option value="Male">
+        Male
+    </option>
+
+    <option value="Female">
+        Female
+    </option>
+
+</select>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    value="{{ patient.phone }}"
+                >
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input
+                    type="email"
+                    name="email_address"
+                    class="form-control"
+                    value="{{ patient.email_address }}"
+                >
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Allergies</label>
+                <textarea
+                    name="allergies"
+                    class="form-control"
+                    rows="3"
+                >{{ patient.allergies }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Medications</label>
+                <textarea
+                    name="medications"
+                    class="form-control"
+                    rows="3"
+                >{{ patient.medications }}</textarea>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Medical History</label>
+                <textarea
+                    name="medical_history"
+                    class="form-control"
+                    rows="4"
+                >{{ patient.medical_history }}</textarea>
+            </div>
+
+            <button class="btn btn-primary px-4">
+                Update Patient
+            </button>
+
+            <a href="/" class="btn btn-secondary px-4">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
