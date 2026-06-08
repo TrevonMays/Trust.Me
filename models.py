@@ -21,6 +21,14 @@ class Patient(db.Model):
     medications = db.Column(db.Text)
     medical_history = db.Column(db.Text)
 
+
+    family_members = db.relationship(
+        "FamilyMember",
+        backref="user",
+        lazy=True,
+        cascade="all, delete-orphan"
+        )
+
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
@@ -30,3 +38,20 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
+
+
+class FamilyMember(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+
+    first_name = db.Column(db.String(100), nullable=False)
+    last_name = db.Column(db.String(100), nullable=False)
+    date_of_birth = db.Column(db.String(100))
+    relationship = db.Column(db.String(50))
+
+    allergies = db.Column(db.Text)
+    medications = db.Column(db.Text)
+    medical_history = db.Column(db.Text)
+
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
