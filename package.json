@@ -1,0 +1,24 @@
+{
+  "name": "flask_emr",
+  "version": "1.0.0",
+  "description": "A full-stack Electronic Medical Record (EMR) web application built with Python, Flask, SQLAlchemy, and SQLite. This project allows users to securely manage patient records, medical histories, appointments, and healthcare-related workflows through a web-based interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrevonMays/Trust.Me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TrevonMays/Trust.Me/issues"
+  },
+  "homepage": "https://github.com/TrevonMays/Trust.Me#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
